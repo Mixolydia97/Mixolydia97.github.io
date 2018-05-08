@@ -1,0 +1,17 @@
+- born December 28, 1969 in Helsinki, Finland
+- son of Anna and Nils Torvalds
+- began programming on a Commodore VIC-20 at the age of 11 (in 1981). 
+  he also did programming on a Sinclair QL, and wrote several pieces 
+  of software for it, such as an assembler, editor, and games.
+- begins computer science major at University of Helsinki on Mar 27, 1988
+- purchased an i386-based computer on January 5, 1991 that was capable of running Minix
+- v0.01 of what would become Linux is released September 1, 1991
+- Linux 1.0 released on March 14, 1994
+- completes master's degree on May 20, 1996 with this thesis being written about Linux
+- Involved in 86open, which tried to forma consensus on the common binary format for UNIX-like systems
+- began working at Transmeta, an x86 microprocessor company, in 1997 until 2003
+- May 27, 1999 he was offered stock options from Red Hat and VA Linux. this made him a millionaire later that year
+- 2003 he left Transmeta and joined the Open Source Development Labs, which later became the Linux Foundation
+- Apr 7, 2005 git release
+- in 2010, after living in Portland, Oregon for several years with his family, Torvalds became a US citizen
+- Linus Torvalds continues to work full-time as a maintainer of the Linux kernel
