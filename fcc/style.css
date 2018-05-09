@@ -1,26 +1,45 @@
-/*CSS grid*/
-.container {
-	display: grid;
-	grid-template-columns: 20% [main-start] auto [main-end] 20%;
-	/*I want to make the title and the picture in the 40%*/
-	grid-template-rows: [top] 40% [body-start] auto [body-end];
+:root {
+	--dark: #404040;
+	--light: #F9F9F9;
+	--penguin: #F5BD0C;
 }
 
-.item {
-	grid-column-start: main-start;
-	grid-column-end: main-end;
-	grid-row-start: body-start;
-	grid-row-start: body-end;
+body {
+	background-color: var(--light);
+	color: var(--dark);
 }
 
-header.item {
-	grid-column-start: main-start;
-	grid-column-end: main-end;
-	grid-row-start: top;
-	grid-row-end: body-start;
+header {
 	justify-self: center;
 	text-align: center;
 }
 
+h1, h3 {
+	font-family: Titillium Web, sans-serif;
+	background-color: var(--penguin);
+}
 
+h1 {
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 1.5;
+}
+
+article {
+	width: 65%;
+	min-width: 600px;
+	margin: 20px auto;
+}
+
+p {
+	text-align: justify;
+	font-family: serif;
+	font-size: 1.25em;
+}
+
+a {
+	color: var(--penguin);
+}
 
