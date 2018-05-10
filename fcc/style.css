@@ -1,3 +1,6 @@
+/* Trying to start from a high level with color definitions and
+ * larger semantic elements at the top */
+
 :root {
 	--dark: #404040;
 	--light: #F9F9F9;
@@ -14,6 +17,16 @@ header {
 	text-align: center;
 }
 
+article {
+	width: 90%;
+	max-width: 800px;
+	margin: 20px auto;
+}
+
+footer {
+	height: 3em;
+}
+
 h1, h3 {
 	font-family: Titillium Web, sans-serif;
 	background-color: var(--penguin);
@@ -25,12 +38,7 @@ h1 {
 
 h3 {
 	font-size: 1.5rem;
-}
-
-article {
-	width: 90%;
-	max-width: 800px;
-	margin: 20px auto;
+	padding: 5px 10px;
 }
 
 p {
