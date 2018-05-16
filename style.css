@@ -1,0 +1,95 @@
+:root {
+  --gui: rgb(169, 169, 169);
+  --bg: rgb(86, 84, 121);
+  --terminal-green: rgb(0, 204, 0);
+}
+
+body {
+  background-color: var(--bg);
+}
+
+/* add back styling for the flexbox for larger screens */
+
+.window {
+  display: block;  
+  margin: 20px auto;
+  box-shadow: 10px 10px 0px #333;
+  border: solid;
+  border-width: 2px;
+
+  /* This is the default for small screens */
+  width: 400px;
+}
+
+/* size of  */
+.title {
+  background: var(--gui);
+  display: flex;
+  width: 100%;
+  height: 25px;
+  /* Not sure if I like this */
+  /*border-bottom: 1px solid;*/
+}
+
+.title-element {
+  border-top: 2px solid white;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid white;
+  box-sizing: border-box;
+  padding: 2px 0;
+}
+
+/* Only the window name will change in size */
+.window-name {
+  flex-grow: 1;
+  text-align: center;
+  font-family: Helvetica;
+}
+
+/* can't think of a way to make this square */
+.right-corner {
+  width: 25px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.left-corner {
+  width: 25px;
+  padding: 4px;
+}
+
+.roll-up {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border: solid;
+  border-width: 3px 1px 1px 1px;
+}
+
+.thumbnail {
+  /* only for small screens
+   * for larger screens, thumbnails will have constant size*/
+  width: 100%;
+  display: block;
+}
+
+.terminal {
+  display: block;
+  background: black;
+  color: green;
+  padding: 10px;
+}
+
+.terminal > p, .terminal > pre {
+  color: var(--terminal-green);
+  margin: 0px;
+  padding: 5px;
+  font-family: "Ubuntu Mono", Monospace;
+  font-size: 14pt;
+}
+
+.terminal > p {
+	line-height: 1.1;
+}
+
