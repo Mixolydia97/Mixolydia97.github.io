@@ -1,0 +1,9 @@
+for tablets (both portrait and landscape), need the portfolio windows to be arranged in a grid with two columns. i'll probably have to have to change the menu position as well. the menu will be stuck to the top on the phone screen, the closed menu should be half the width of the screen so that the open menu will be the same width as the windows. not exactly sure what to do when it's a tablet, though. it would look quite long. it might be better to split the top in half, half for the menu and half for the welcome.
+
+for desktops, the menu and welcome should move to the side and the other windows will be on the right. the container for the portfolio will probably still be a flexbox
+
+icons for menu:
+arrow-thick-top (top)
+briefcase (projects)
+person (about)
+chat (contact)
