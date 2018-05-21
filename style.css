@@ -130,9 +130,11 @@ nav > button {
 }
 
 .terminal > h1 {
+    margin: 0;
     font-family: "Press Start 2P", Monospace;
     font-size: 2em;
     text-align: center;
+    line-height: 1.5;
 }
 
 .terminal > a {}
@@ -164,14 +166,25 @@ nav > button {
 }
 
 @media only screen and (min-width: 800px) {
+    
+    body {
+
+    }
+    
+    main {
+        width: 70%;
+        position: absolute;
+        right: 0;
+    }
+    
     /* nav and welcome become sidebar */
-    #nav-and-welcome {
+    #nav-and-welcome {       
         display: flex;
         flex-flow: column;
         position: fixed;
         top: 0;
         height: 100%;
-        width: 20em;
+        width: 30%;
     }
     
     nav { 
@@ -193,8 +206,13 @@ nav > button {
         flex-grow: 1;
     }
     
+    /* not the cleanest solution ever */
+    .terminal > p {
+        margin: 3em 0;
+    }
+    
     /* change grid to three columns */
     .portfolio {
-        
+    
     }
 }
