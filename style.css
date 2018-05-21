@@ -30,8 +30,10 @@ nav > button {
     width: 100%;
 }
 
-main {
-    margin-top: 60px;
+/* the welcome window needs extra margins for the nav */
+#welcome {
+    width: 95%;
+    margin: 60px auto 20px auto;
 }
 
 /* add back styling for the flexbox for larger screens */
@@ -129,8 +131,34 @@ main {
 
 .terminal > h1 {
     font-family: "Press Start 2P", Monospace;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
 }
 
 .terminal > a {}
+
+@media only screen and (min-width: 600px) {
+
+    nav > button {
+        width: 5em;
+        height: 5em;
+    }
+    
+    #welcome {
+        margin-top: 6em;
+    }
+    
+    .portfolio {
+        display: grid;
+        width: 95%;
+        grid-template-columns: 48% 48%;
+        grid-gap: 2em 4%;
+        grid-auto-rows: 1fr;
+        margin: 20px auto;
+    }
+    
+    .portfolio > .window {
+        margin: 0;
+        width: 100%;
+    }
+}
