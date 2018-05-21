@@ -163,10 +163,34 @@ nav > button {
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 800px) {
     /* nav and welcome become sidebar */
     #nav-and-welcome {
-        
+        display: flex;
+        flex-flow: column;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 20em;
+    }
+    
+    nav { 
+        position: static;
+        flex-grow: 0;
+    }
+    
+    #welcome {
+        margin: 20px auto;
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column;
+    }
+    
+    #welcome > .terminal {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        flex-grow: 1;
     }
     
     /* change grid to three columns */
