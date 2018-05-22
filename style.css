@@ -50,6 +50,7 @@ nav > button {
 
 .window {
     display: block;
+    background: black;
     margin: 20px auto;
     box-shadow: 8px 8px 0px #333;
     border: solid;
@@ -114,30 +115,27 @@ nav > button {
     padding: 10px 5px;
 }
 
-.terminal > p,
-.terminal > a {
-    margin: 0 auto;
-    font-family: "Ubuntu Mono", Monospace;
-}
-
-.terminal > p,
-.terminal > a {
-    margin: 0 auto;
+.terminal p,
+.terminal a {
+    margin: 0.5em auto;
     font-family: "Ubuntu Mono", Monospace;
     line-height: 1.1;
-    font-size: 1.25em;
+    font-size: 1.5em;
     text-align: center;
 }
 
-.terminal > h1 {
-    margin: 0;
+.terminal h1 {
+    margin: 0.5em auto;
     font-family: "Press Start 2P", Monospace;
     font-size: 2em;
     text-align: center;
     line-height: 1.5;
 }
 
-.terminal > a {}
+.terminal a {
+    color: var(--terminal-green);
+    font-size: 1em;
+}
 
 @media only screen and (min-width: 600px) {
 
@@ -165,7 +163,7 @@ nav > button {
     }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1200px) {
     
     body {
 
@@ -209,10 +207,5 @@ nav > button {
     /* not the cleanest solution ever */
     .terminal > p {
         margin: 3em 0;
-    }
-    
-    /* change grid to three columns */
-    .portfolio {
-    
     }
 }
