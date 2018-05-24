@@ -2,6 +2,7 @@
     --gui: rgb(169, 169, 169);
     --bg: rgb(86, 84, 121);
     --terminal-green: rgb(0, 204, 0);
+    --whiteish: #F8F8F8;
 }
 
 * {
@@ -18,7 +19,8 @@ nav {
     display: block;
 }
 
-nav > button {
+nav > a {
+    display: block;
     width: 3em;
     height: 3em;
     padding: 5px;
@@ -30,13 +32,25 @@ nav > button {
     width: 100%;
 }
 
-/* the welcome window needs extra margins for the nav */
-#welcome {
-    width: 95%;
-    margin: 60px auto 20px auto;
+/* anchors for the top nav */
+
+#top {
+    position: absolute;
+    top: 0;
 }
 
-/* add back styling for the flexbox for larger screens */
+#port {
+    display: block;
+    position: relative;
+    top: -3.5em;
+}
+
+/* the welcome window needs extra margins for the nav 
+   could i instead have it been padding? */
+#welcome {
+    width: 90%;
+    margin: 3.5em auto 0 auto;
+}
 
 /* the gui class is for any element that has the "3D" 
    border and has the gui background color */
@@ -51,59 +65,51 @@ nav > button {
 .window {
     display: block;
     background: black;
-    margin: 20px auto;
-    box-shadow: 8px 8px 0px #333;
+    margin: 1em auto;
+    box-shadow: 0.5em 0.5em 0px #333;
     border: solid;
     border-width: 2px;
-
-    /* This is the default for small screens */
-    width: 95%;
+    width: 90%;
 }
 
 .titlebar {
     background: var(--gui);
     display: flex;
     width: 100%;
-    height: 25px;
+    height: 2em;
     /* Not sure if I like this */
     /*border-bottom: 1px solid;*/
 }
 
-.title-element {
-    padding: 2px 0;
-}
-
-/* Only the window name will change in size */
-
 .window-name {
+    /* Only the window name will change in size */
     flex-grow: 1;
     text-align: center;
     font-family: Helvetica;
+    font-size: 1em;
+    padding: 0.35em 0;
 }
 
-.right-corner, .left-corner {
-    width: 25px;
-}
-
+.left-corner,
 .right-corner {
-    text-align: center;
-    font-family: sans-serif;
+    width: 2em;
 }
 
 .left-corner {
-    padding: 4px;
+    background: url(images/rollup.svg);
+    background-size: 100%;
 }
 
-.roll-up {
-    height: 100%;
+.right-corner {
+    background: url(images/close.svg);
+    background-size: 100%;
+}
+
+.titlebar img {
     width: 100%;
-    border: solid;
-    border-width: 3px 1px 1px 1px;
 }
 
 .thumbnail {
-    /* only for small screens
-   * for larger screens, thumbnails will have constant size*/
     width: 100%;
     display: block;
 }
@@ -116,7 +122,8 @@ nav > button {
 }
 
 .terminal p,
-.terminal a {
+.terminal a,
+.terminal h1 {
     margin: 0.5em auto;
     font-family: "Ubuntu Mono", Monospace;
     line-height: 1.1;
@@ -125,38 +132,50 @@ nav > button {
 }
 
 .terminal h1 {
-    margin: 0.5em auto;
     font-family: "Press Start 2P", Monospace;
     font-size: 2em;
-    text-align: center;
     line-height: 1.5;
 }
 
+/* can't figure out why anchors are larger than paragraph
+   also why doesn't it take the correct color?*/
 .terminal a {
     color: var(--terminal-green);
     font-size: 1em;
 }
 
-@media only screen and (min-width: 600px) {
+.website {
+    background: var(--whiteish);
+    display: block;
+    font-family: Helvetica;
+}
 
-    nav > button {
+.website > p {
+    margin: 0;
+    padding: 1em;
+}
+
+
+@media only screen and (min-width: 600px) {
+    
+    nav > a {
         width: 4em;
         height: 4em;
     }
-    
+
     #welcome {
         margin-top: 5em;
     }
-    
+
     .portfolio {
         display: grid;
-        width: 95%;
+        width: 90%;
         grid-template-columns: 48% 48%;
         grid-gap: 2em 4%;
         grid-auto-rows: 1fr;
         margin: 20px auto;
     }
-    
+
     .portfolio > .window {
         margin: 0;
         width: 100%;
@@ -164,19 +183,15 @@ nav > button {
 }
 
 @media only screen and (min-width: 1200px) {
-    
-    body {
 
-    }
-    
     main {
         width: 70%;
         position: absolute;
         right: 0;
     }
-    
+
     /* nav and welcome become sidebar */
-    #nav-and-welcome {       
+    #nav-and-welcome {
         display: flex;
         flex-flow: column;
         position: fixed;
@@ -184,26 +199,26 @@ nav > button {
         height: 100%;
         width: 30%;
     }
-    
-    nav { 
+
+    nav {
         position: static;
         flex-grow: 0;
     }
-    
+
     #welcome {
         margin: 20px auto;
         flex-grow: 1;
         display: flex;
         flex-flow: column;
     }
-    
+
     #welcome > .terminal {
         display: flex;
         flex-flow: column;
         justify-content: center;
         flex-grow: 1;
     }
-    
+
     /* not the cleanest solution ever */
     .terminal > p {
         margin: 3em 0;
