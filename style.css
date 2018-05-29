@@ -39,7 +39,8 @@ nav > a {
     top: 0;
 }
 
-#port {
+#port,
+#abt {
     display: block;
     position: relative;
     top: -3.5em;
@@ -150,9 +151,23 @@ nav > a {
     font-family: Helvetica;
 }
 
-.website > p {
+.website > h1 {
+    padding: 0.5em;
+    padding-bottom: 0;
+    font-size: 2em;
     margin: 0;
+    
+}
+
+.website > p {
     padding: 1em;
+    font-size: 1em;
+    margin: 0;
+    
+}
+
+footer {
+    height: 4em;
 }
 
 
@@ -185,7 +200,7 @@ nav > a {
 @media only screen and (min-width: 1200px) {
 
     main {
-        width: 70%;
+        width: 75%;
         position: absolute;
         right: 0;
     }
@@ -197,7 +212,7 @@ nav > a {
         position: fixed;
         top: 0;
         height: 100%;
-        width: 30%;
+        width: 25%;
     }
 
     nav {
@@ -217,6 +232,10 @@ nav > a {
         flex-flow: column;
         justify-content: center;
         flex-grow: 1;
+    }
+    
+    main > * {
+        width: 95%;
     }
 
     /* not the cleanest solution ever */
