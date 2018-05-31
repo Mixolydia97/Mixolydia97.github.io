@@ -46,11 +46,22 @@ nav > a {
     top: -3.5em;
 }
 
-/* the welcome window needs extra margins for the nav 
+/* the welcome-section window needs extra margins for the nav 
    could i instead have it been padding? */
-#welcome {
+#welcome-section {
     width: 90%;
     margin: 3.5em auto 0 auto;
+}
+
+#welcome-section > .terminal {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+
+main {
+    margin-bottom: 4em;
 }
 
 /* the gui class is for any element that has the "3D" 
@@ -149,25 +160,11 @@ nav > a {
     background: var(--whiteish);
     display: block;
     font-family: Helvetica;
-}
-
-.website > h1 {
-    padding: 0.5em;
-    padding-bottom: 0;
-    font-size: 2em;
-    margin: 0;
-    
+    padding: 1em;
 }
 
 .website > p {
-    padding: 1em;
-    font-size: 1em;
-    margin: 0;
-    
-}
-
-footer {
-    height: 4em;
+    font-size: 1.5em;   
 }
 
 
@@ -178,7 +175,7 @@ footer {
         height: 4em;
     }
 
-    #welcome {
+    #welcome-section {
         margin-top: 5em;
     }
 
@@ -205,7 +202,7 @@ footer {
         right: 0;
     }
 
-    /* nav and welcome become sidebar */
+    /* nav and welcome-sectionbecome sidebar */
     #nav-and-welcome {
         display: flex;
         flex-flow: column;
@@ -220,26 +217,18 @@ footer {
         flex-grow: 0;
     }
 
-    #welcome {
+    #welcome-section {
         margin: 20px auto;
         flex-grow: 1;
         display: flex;
         flex-flow: column;
     }
 
-    #welcome > .terminal {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
+    #welcome-section > .terminal {
         flex-grow: 1;
     }
     
     main > * {
         width: 95%;
-    }
-
-    /* not the cleanest solution ever */
-    .terminal > p {
-        margin: 3em 0;
     }
 }
