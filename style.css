@@ -48,6 +48,7 @@ nav > a {
 
 /* the welcome-section window needs extra margins for the nav 
    could i instead have it been padding? */
+
 #welcome-section {
     width: 90%;
     margin: 3.5em auto 0 auto;
@@ -66,6 +67,7 @@ main {
 
 /* the gui class is for any element that has the "3D" 
    border and has the gui background color */
+
 .gui {
     background: var(--gui);
     border-top: 2px solid white;
@@ -151,6 +153,7 @@ main {
 
 /* can't figure out why anchors are larger than paragraph
    also why doesn't it take the correct color?*/
+
 .terminal a {
     color: var(--terminal-green);
     font-size: 1em;
@@ -164,12 +167,12 @@ main {
 }
 
 .website > p {
-    font-size: 1.5em;   
+    font-size: 1.5em;
 }
 
 
 @media only screen and (min-width: 600px) {
-    
+
     nav > a {
         width: 4em;
         height: 4em;
@@ -227,7 +230,7 @@ main {
     #welcome-section > .terminal {
         flex-grow: 1;
     }
-    
+
     main > * {
         width: 95%;
     }
